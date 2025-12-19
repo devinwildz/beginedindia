@@ -11,7 +11,7 @@ const page = () => {
         {
             id: 1,
             title: "ACLP",
-            subtitle: "Advanced Certified Lactation Professional",
+            subtitle: "Advanced Professional",
             hours: "100 Hours",
             level: "Advanced Level",
             description: "Comprehensive advanced training for experienced professionals seeking the highest level of certification.",
