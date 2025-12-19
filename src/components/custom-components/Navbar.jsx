@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -60,13 +61,13 @@ export default function Navbar() {
                 );
               }
               return (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="text-[#2b5e5e] hover:text-[#2b5e5e] font-medium"
                 >
                   {link.name}
-                </a>
+                </Link>
               );
             })}
 
@@ -94,7 +95,7 @@ export default function Navbar() {
               <SheetContent side="right" className="w-64">
                 <div className="flex flex-col space-y-6 mt-8">
                   {navLinks.map((link) => (
-                    <a
+                    <Link
                       key={link.name}
                       href={link.href}
                       className="text-green-700 hover:text-green-800 font-medium text-lg"
@@ -102,7 +103,7 @@ export default function Navbar() {
                     >
                       {link.name}
                       {link.name === 'Resources' && <span className="ml-2">▼</span>}
-                    </a>
+                    </Link>
                   ))}
                   <div className="border-t pt-4">
                     <p className="text-green-700 font-medium text-lg flex items-center">
