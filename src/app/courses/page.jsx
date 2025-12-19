@@ -1,6 +1,65 @@
 import React from 'react'
+import Image from 'next/image'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Check } from 'lucide-react'
 
 const page = () => {
+
+
+    const courses = [
+        {
+            id: 1,
+            title: "ACLP",
+            subtitle: "Advanced Certified Lactation Professional",
+            hours: "100 Hours",
+            level: "Advanced Level",
+            description: "Comprehensive advanced training for experienced professionals seeking the highest level of certification.",
+            features: [
+                "12 months online access",
+                "LEAARC approved curriculum",
+                "Advanced clinical skills",
+                "Professional mentorship"
+            ],
+            // image: "/images/aclp-course.jpg", // apni image daalna
+            buttonText: "Learn More About ACLP"
+        },
+        {
+            id: 2,
+            title: "CLP",
+            subtitle: "Certified Lactation Professional",
+            hours: "90 Hours",
+            level: "Intermediate Level",
+            description: "Build strong foundational and clinical skills to support breastfeeding families with confidence.",
+            features: [
+                "9 months online access",
+                "Evidence-based curriculum",
+                "Clinical case studies",
+                "Community support"
+            ],
+            // image: "/images/clp-course.jpg",
+            buttonText: "Learn More About CLP"
+        },
+        {
+            id: 3,
+            title: "BLP",
+            subtitle: "Basic Lactation Professional",
+            hours: "45 Hours",
+            level: "Beginner Level",
+            description: "Perfect starting point for healthcare professionals new to lactation support and counseling.",
+            features: [
+                "6 months online access",
+                "Foundational knowledge",
+                "Practical tools",
+                "Beginner-friendly pace"
+            ],
+            // image: "/images/blp-course.jpg",
+            buttonText: "Explore BLP Course"
+        }
+    ];
+
+
+
     return (
         <>
             {/* Hero Section */}
@@ -30,12 +89,12 @@ const page = () => {
                             >
                                 {/* Image Side */}
                                 <div className="relative h-80 md:h-full overflow-hidden group">
-                                    <Image
+                                    {/* <Image
                                         src={course.image}
                                         fill
                                         alt={course.title}
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
+                                    /> */}
                                     <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
 
                                     {/* Badges on Image */}
